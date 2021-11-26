@@ -7,24 +7,26 @@ import org.openqa.selenium.opera.OperaDriver;
 
 public class Opera {
     public static void main(String[] args) throws InterruptedException {
-     //   System.setProperty("webdriver.opera.driver", "C:\\Users\\rinal\\IdeaProjects\\Software\\operadriver_win64\\operadriver.exe");
+        System.setProperty("webdriver.opera.driver", "C:\\Users\\rinal\\IdeaProjects\\Software\\operadriver_win64\\operadriver.exe");
 
-     //   WebDriver driver = new OperaDriver();
-    //    driver.get("https://demo.nopcommerce.com/registerresult/1?returnUrl=/");
-      //  Thread.sleep(4000);
-     //   driver.manage().window().maximize();
-    //    Thread.sleep(4000);
+        WebDriver driver = new OperaDriver();
+        driver.get("https://demo.nopcommerce.com/registerresult/1?returnUrl=/");
+        Thread.sleep(4000);
+        driver.manage().window().maximize();
+        Thread.sleep(4000);
+
+        driver.findElement(By.className("ico-login")).click();
+
+        driver.findElement(By.id("Email")).sendKeys("testerrinpatel@gmail.com");
+        Thread.sleep(4000);
+
+        driver.findElement(By.id("Password")).sendKeys("Dasnadas2020");
+        Thread.sleep(4000);
+
+        driver.findElement(By.className("login-button")).click();
+
+        driver.close();
 
 
-
-     //   WebElement username = driver.findElement(By.id("user email login"));
-     //   Thread.sleep(4000);
-
-     //   WebElement password = driver.findElement(By.id("password"));
-     //   Thread.sleep(4000);
-
-    //    username.sendKeys("testerrinpatel@gmail.com");
-     //   password.sendKeys("Dasnadas2020");
     }
-
 }
